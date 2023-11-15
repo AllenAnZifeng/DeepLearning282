@@ -9,5 +9,9 @@ pipe = pipe.to("cuda")
 url = "https://huggingface.co/datasets/patrickvonplaten/images/resolve/main/aa_xl/000000009.png"
 
 init_image = load_image(url).convert("RGB")
-prompt = "a photo of an astronaut riding a horse on mars"
-image = pipe(prompt, image=init_image).images
+prompt = "change the horse into a cat"
+image = pipe(prompt, image=init_image, num_inference_steps=10).images
+
+for i in range(len(image)):
+    image[i].save(f"sample{i}.png")
+
