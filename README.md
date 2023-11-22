@@ -1,5 +1,11 @@
 # DeepLearning282
 
+## WandB Logging
+
+Add your api key for wandb to the file `wandb_api_key`. This files will be git-ignored for security issues. 
+
+
+
 ```
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"
 export INSTANCE_DIR="pictures"
