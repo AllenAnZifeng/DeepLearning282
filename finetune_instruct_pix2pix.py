@@ -56,10 +56,10 @@ check_min_version("0.15.0.dev0")
 logger = get_logger(__name__, log_level="INFO")
 
 DATASET_NAME_MAPPING = {
-    "sayakpaul/cartoonizer-dataset": (
+    "annyorange/colorized-dataset": (
         "original_image",
         "edit_prompt",
-        "cartoonized_image",
+        "colorized_image",
     ),
 }
 WANDB_TABLE_COL_NAMES = ["original_image", "edited_image", "edit_prompt"]
@@ -118,7 +118,7 @@ def parse_args():
     parser.add_argument(
         "--edited_image_column",
         type=str,
-        default="cartoonized_image",
+        default="colorized_image",
         help="The column of the dataset containing the edited image.",
     )
     parser.add_argument(
@@ -142,7 +142,7 @@ def parse_args():
     parser.add_argument(
         "--num_validation_images",
         type=int,
-        default=4,
+        default=1,
         help="Number of images that should be generated during validation with `validation_prompt`.",
     )
     parser.add_argument(
@@ -324,7 +324,7 @@ def parse_args():
     parser.add_argument(
         "--hub_token",
         type=str,
-        default=None,
+        default="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",
         help="The token to use to push to the Model Hub.",
     )
     parser.add_argument(
@@ -462,7 +462,7 @@ def main():
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         mixed_precision=args.mixed_precision,
         log_with=args.report_to,
-        logging_dir=logging_dir,
+        project_dir=logging_dir,
         project_config=accelerator_project_config,
     )
 
@@ -504,6 +504,7 @@ def main():
                 )
             else:
                 repo_name = args.hub_model_id
+            print("repo_name:",repo_name)
             create_repo(repo_name, exist_ok=True, token=args.hub_token)
             repo = Repository(
                 args.output_dir, clone_from=repo_name, token=args.hub_token
@@ -857,7 +858,7 @@ def main():
     # We need to initialize the trackers we use, and also store our configuration.
     # The trackers initializes automatically on the main process.
     if accelerator.is_main_process:
-        accelerator.init_trackers("instruct-pix2pix-cartoonizer", config=vars(args))
+        accelerator.init_trackers("instruct-pix2pix-colorizer", config=vars(args))
 
     # Train!
     total_batch_size = (
@@ -1082,6 +1083,7 @@ def main():
                     enabled=accelerator.mixed_precision == "fp16",
                 ):
                     for _ in range(args.num_validation_images):
+                        print("validate",args.num_validation_images)
                         edited_images.append(
                             pipeline(
                                 args.validation_prompt,
@@ -1092,7 +1094,7 @@ def main():
                                 generator=generator,
                             ).images[0]
                         )
-
+                print("using w&b")
                 for tracker in accelerator.trackers:
                     if tracker.name == "wandb":
                         wandb_table = wandb.Table(columns=WANDB_TABLE_COL_NAMES)
