@@ -56,7 +56,8 @@ run the program
 ```
 in run_finetune.sh change "OUTPUT_DIR" into your path.
 
-## building your own datasets and run
-make sure you have already logged in  huggingface before you start running generate_dataset.py and export_to_hub.py.
+## Building your own datasets or finetuning work
+
+Make sure you have already logged in huggingface before you start running generate_dataset.py and export_to_hub.py.
 
 By running generate_dataset.py and export_to_hub.py can help you generate your own dataset.
