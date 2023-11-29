@@ -1,11 +1,12 @@
-# DeepLearning282
+# Enhancing Visual Realism: Fine-Tuning InstructPix2Pix for Advanced Image Colorization (Deeplearning 282A/182)
 
-## WandB Logging
+## quickstart
+The following results were obtained using a 3080TI
 
-Add your api key for wandb to the file `wandb_api_key`. This files will be git-ignored for security issues. 
-
-
-
+### WINDOWS
+```
+> huggingface-cli login    
+```
 ```
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"
 export INSTANCE_DIR="pictures"
