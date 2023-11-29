@@ -284,7 +284,7 @@ def parse_args():
         ),
     )
     parser.add_argument(
-        "--use_ema", action="store_true", help="Whether to use EMA model."
+        "--use_ema", action="store_true",help="Whether to use EMA model."
     )
     parser.add_argument(
         "--non_ema_revision",
@@ -336,7 +336,7 @@ def parse_args():
     parser.add_argument(
         "--hub_token",
         type=str,
-        default="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",
+        default=None,
         help="The token to use to push to the Model Hub.",
     )
     parser.add_argument(
@@ -454,6 +454,9 @@ def download_image(url):
     return image
 
 def image_loss(out, gt):
+    out = out.convert("LAB")
+    gt = gt.convert("LAB")
+
     out_array = np.array(out)
     gt_array = np.array(gt)
     gt_array = gt_array[:out_array.shape[0], :out_array.shape[1], :]
@@ -570,6 +573,7 @@ def main():
     text_encoder.requires_grad_(False)
 
     # Create EMA for the unet.
+    # print(args.use_ema)
     if args.use_ema:
         ema_unet = EMAModel(
             unet.parameters(), model_cls=UNet2DConditionModel, model_config=unet.config
@@ -789,6 +793,8 @@ def main():
 
         # Preprocess the captions.
         captions = [caption for caption in examples[edit_prompt_column]]
+
+        # captions = ['Apply color to the image.','Apply color to the image.','Apply color to the image.','Apply color to the image.']
         examples["input_ids"] = tokenize_captions(captions)
         return examples
 
@@ -1141,6 +1147,7 @@ def main():
                             loss = image_loss(edited_image, gt_image)
                             tracker.log({f"image": Img})
                             tracker.log({"image_loss": loss})
+                            tracker.log({"train_loss": train_loss})
                             edited_image.save(f"./test/{step}.jpg")
 
                     if args.use_ema:

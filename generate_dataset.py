@@ -20,38 +20,21 @@ import os
 
 import cv2
 import glob
-import tensorflow as tf
-import tensorflow_datasets as tfds
-from PIL import Image
-from tqdm import tqdm
 
 
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Prepare a dataset for InstructPix2Pix style training."
     )
-    parser.add_argument(
-        "--model_id", type=str, default="sayakpaul/whitebox-cartoonizer"
-    )
-    parser.add_argument("--dataset_id", type=str, default="imagenette")
-    parser.add_argument("--max_num_samples", type=int, default=5000)
-    parser.add_argument("--data_root", type=str, default="./datasets", help="datasets_dir")
+    parser.add_argument("--data_root", type=str, default="./datasets_val", help="datasets_dir")
     args = parser.parse_args()
     return args
 
 
-# def load_dataset(dataset_id: str, max_num_samples: int) -> tf.data.Dataset:
-#     dataset = tfds.load(dataset_id, split="train")
-#     dataset = dataset.shuffle(max_num_samples if max_num_samples is not None else 128)
-#     if max_num_samples is not None:
-#         print(f"Dataset will be restricted to {max_num_samples} samples.")
-#         dataset = dataset.take(max_num_samples)
-#     return dataset
-
 
 def main(args):
     print("Loading initial dataset")
-    color_image_paths = glob.glob("C:/Users/30661/PycharmProjects/DeepLearning282/pictures/*.jpg")
+    color_image_paths = glob.glob("C:/Users/30661/PycharmProjects/DeepLearning282/val_pic/*.jpg")
 
     for color_image_path in color_image_paths:
         color_image = cv2.imread(color_image_path)
