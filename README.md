@@ -1,5 +1,5 @@
 # Enhancing Visual Realism: Fine-Tuning InstructPix2Pix for Advanced Image Colorization (Deeplearning 282A/182)
-
+![image](https://github.com/AllenAnZifeng/DeepLearning282/blob/main/stages.png)
 ## quickstart
 The results below were obtained using a GPU 3080TI.
 ### WINDOWS
