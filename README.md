@@ -28,7 +28,7 @@ run the program
 ```
 > ./run_finetune.bat   
 ```
-in run_finetune.bat change "OUTPUT_DIR" into your path()
+in run_finetune.bat change "OUTPUT_DIR" into your path.
 ### LINUX
 login into huggingface
 ```
@@ -55,4 +55,4 @@ run the program
 ```
 > ./run_finetune.sh
 ```
-
+in run_finetune.sh change "OUTPUT_DIR" into your path.
