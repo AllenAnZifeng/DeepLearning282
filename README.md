@@ -4,10 +4,16 @@
 The following results were obtained using a 3080TI
 
 ### WINDOWS
+login into huggingface
 ```
 > huggingface-cli login    
 ```
+Confirm that you successfully logged in to huggingface
 ```
+> huggingface-cli whoami 
+```
+
+
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"
 export INSTANCE_DIR="pictures"
 export OUTPUT_DIR="output"
