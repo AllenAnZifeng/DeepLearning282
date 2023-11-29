@@ -12,12 +12,15 @@ Confirm that you successfully logged in to huggingface
 ```
 > huggingface-cli whoami 
 ```
-In finetune_instruct_pix2pix.py "parser.add_argument(
+In finetune_instruct_pix2pix.py 
+```parser.add_argument(
         "--hub_token",
         type=str,
         default=None,
         help="The token to use to push to the Model Hub.",
-    )" replace the default from None to your huggingface access token.
+    )```
+replace the `default` from `None` to your huggingface access token.
+
 run the program
 ```
 > ./run_finetune.bat   
