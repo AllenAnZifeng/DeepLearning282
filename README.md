@@ -5,7 +5,7 @@
 
 https://huggingface.co/datasets/annyorange/colorized_people-dataset
 
-## quickstart
+## Quickstart
 The code need a gpu device to run.
 
 Requires Huggingface and wandb accounts.
