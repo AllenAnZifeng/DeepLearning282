@@ -7,7 +7,12 @@ https://huggingface.co/datasets/annyorange/colorized_people-dataset
 
 ## quickstart
 The code need a gpu device to run.
+
 Requires Huggingface and wandb accounts.
+
+Requires torch version 2.1.0+cu118 or higher and xformers to run.
+
+Note: Installing xformers with 'pip install xformers' may replace the previously installed torch version with the CPU version. Please ensure that the torch version remains compatible with CUDA (cu118) by reinstalling the appropriate torch version if needed.
 
 ### WINDOWS
 login into huggingface
