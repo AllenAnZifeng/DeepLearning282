@@ -80,3 +80,9 @@ By running generate_dataset.py and export_to_hub.py can help you generate your o
 ```
 > python ori_instructpix2pix.py
 ```
+## loss
+
+<p float="left">
+  <img src="https://github.com/AllenAnZifeng/DeepLearning282/blob/main/W%26B%20Chart%202023_11_29%2023_04_53.png" width="400" />
+  <img src="https://github.com/AllenAnZifeng/DeepLearning282/blob/main/W%26B%20Chart%202023_11_29%2023_05_08.png" width="400" />
+</p>
