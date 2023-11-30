@@ -1,50 +1,30 @@
-Add color to the picture.
-Infuse the photo with hues.
-Apply colors to the illustration.
-Bring the image to life with colors.
-Tint the photograph.
-Paint the sketch in vibrant tones.
-Give life to the drawing with color.
-Saturate the image with color.
-Enhance the graphic with a palette of colors.
-Imbue the picture with colorful shades.
-Transform the image with a splash of color.
-Shade the line art with colors.
-Render the image in full color.
-Brighten up the black and white photo with colors.
-Color in the diagram.
-Fill the canvas with colors.
-Inject color into the monochrome image.
-Layer colors onto the image.
-Convert the grayscale image to color.
-Adorn the picture with a range of colors.
-Dye the image with a spectrum of shades.
-Brush color onto the image.
-Illustrate the image with colors.
-Introduce color to the outline.
-Spread colors across the image.
-Implement a color scheme in the image.
-Overlay the image with colors.
-Assign colors to the image.
-Depict the image in colors.
-Revitalize the image with vibrant colors.
-Colorize the black and white snapshot.
-Enliven the image with color details.
-Harmonize the image with colorful tones.
-Cast the image in colorful light.
-Stain the image with different colors.
-Bathe the image in a spectrum of colors.
-Furnish the image with a burst of color.
-Embellish the image with colorful accents.
-Amplify the image with a variety of colors.
-Lace the image with a multitude of colors.
-Color-flood the image.
-Splash the image with a range of hues.
-Engage the image with color.
-Drench the image in a kaleidoscope of colors.
-Smear colors over the image.
-Coat the image with a colorful veneer.
-Weave colors into the image.
-Chromatize the image.
-Project colors onto the image.
-Compose the image in a colorful array.
+Apply color to the image.
+Add colors to the image.
+Convert the image to color.
+Fill the image with colors.
+Colorize the image.
+Render the image in color.
+Give the image a colorful appearance.
+Paint the image with colors.
+Bring vibrant colors to the image.
+Add a splash of color to the image.
+Infuse the image with color.
+Make the image vibrant with colors.
+Apply a color palette to the image.
+Provide hues to the image.
+Transform the image into a colorful version.
+Imbue the image with a spectrum of colors.
+Colorize the grayscale image.
+Bring life to the image with colors.
+Add chromatic tones to the image.
+Fill the image with a range of colors.
+Create a colored version of the image.
+Introduce color to the image.
+Paint the image with a variety of colors.
+Overlay the image with vibrant colors.
+Give the image a vibrant and lively look.
+Apply a color filter to the image.
+Enhance the image with a burst of colors.
+Add a pop of color to the image.
+Generate a colorized version of the image.
+Intensify the image with a palette of colors.
